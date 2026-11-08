@@ -1,0 +1,27 @@
+name: PDF
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compilar o artigo
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: artigo.tex
+          latexmk_use_lualatex: false
+          args: -pdf -bibtex -interaction=nonstopmode -file-line-error
+
+      - name: Publicar o PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: artigo
+          path: artigo.pdf
+          retention-days: 30
