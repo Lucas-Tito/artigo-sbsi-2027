@@ -63,10 +63,10 @@ Cost therefore becomes a factor in a methodological decision. Whether a
 researcher can code systematically ends up depending on license availability
 rather than on the design of the study.
 
-The first author faced exactly this problem while writing his undergraduate
-thesis. The analysis was carried out in ATLAS.ti, a paid tool, not by
-preference but by elimination: the free alternatives available at the time
-offered few features and dated interfaces.
+%The first author faced exactly this problem while writing his undergraduate
+%thesis. The analysis was carried out in ATLAS.ti, a paid tool, not by
+%preference but by elimination: the free alternatives available at the time
+%offered few features and dated interfaces.
 % TODO nomear as gratuitas testadas e dizer o que faltou em cada uma.
 % Sem isso esta frase e opiniao; com isso vira evidencia.
 
@@ -90,10 +90,10 @@ resulting tool and how it has been used so far.
 Development started in June 2026 and has followed an iterative and incremental
 approach, with four public releases to date; the version described here is
 0.7.0, from October 2026. The team is small: two developers, one of whom is the
-first author and acts as maintainer, and one supervising researcher. External
-contributions are made through pull requests against the public repository, and
-roughly a fifth of the commits so far come from a contributor other than the
-maintainer.
+first author and acts as maintainer, and one supervising researcher. The
+project is nevertheless set up to be worked on from outside it: the repository
+is public, development is tracked in open issues, and contributions arrive as
+pull requests reviewed by the maintainer.
 
 Three design decisions were taken at the outset and have constrained every
 choice since.
@@ -221,8 +221,12 @@ removes the barrier that motivated the work. There is \textbf{data
 sovereignty}, since no component requires an account, a server or a network
 connection, and the material under analysis never leaves the researcher's
 machine unless the researcher explicitly exports it. And there is \textbf{no
-lock-in}, because the project format is open and the code is public and open to
-contribution. The tool is available at
+lock-in}: the project format is open and the source is public under a free
+license, so the tool can be inspected, adapted to a method it does not yet
+support, or picked up and maintained by others if the current team stops
+working on it. A proprietary tool offers none of these, and a researcher who
+needs an analysis the tool does not perform has no recourse but to wait for the
+vendor. The tool is available at
 \url{https://github.com/Lucas-Tito/LivreAnalise}.
 % TODO fechar a issue #27 antes de submeter: o package.json declara MIT mas nao
 % existe arquivo LICENSE, e sem ele o padrao legal e direitos reservados.
