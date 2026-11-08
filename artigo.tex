@@ -109,9 +109,11 @@ leaves the machine, and when.
 
 \textbf{The project format is interoperable.} Adopting REFI-QDA
 \cite{refiqda}, the open exchange standard for qualitative analysis software,
-means a project can be moved in and out of the other tools that implement it,
-ATLAS.ti among them, so choosing this one is not a commitment that locks the
-researcher in.
+means a project can be moved in and out of the other tools that implement the
+standard, so choosing this one is not a commitment that locks the researcher
+in.
+\todo{which of the tools surveyed read and write \texttt{.qdpx} today, and in
+which direction}
 
 The implementation is an Electron application written in TypeScript, with React
 and Tailwind in the interface. Project data is stored in SQLite, accessed
@@ -199,7 +201,7 @@ research notes anchored in the text, full undo and redo, named project
 checkpoints, search across the project, and typographic settings including the
 OpenDyslexic typeface.
 
-Two features distinguish the tool from the free alternatives we found.
+Two features go beyond the coding cycle itself.
 Transcription of audio and video runs \textbf{locally}, through whisper.cpp,
 with the text appearing on screen as it is recognized and a progress bar driven
 by the fraction of audio already processed; nothing is sent to any API. And the
@@ -209,17 +211,13 @@ markings, which the researcher can paste into any assistant. The file opens
 with an explicit warning that the material will leave the machine and that
 participant consent and ethics approval should be checked first.
 
-Interoperability is provided through REFI-QDA \cite{refiqda}, which is
-supported by the main tools in the field, ATLAS.ti among them: a
+Interoperability is provided through REFI-QDA \cite{refiqda}, the open
+exchange standard for qualitative analysis software: a
 \texttt{.qdpx} project can be opened, creating a new project, and any project
 can be exported back. Codes map to leaf \texttt{Code} elements,
 categories to nested \texttt{Code} elements, groups to \texttt{Set} and
 \texttt{MemberCode}, and quotations to \texttt{PlainTextSelection} and
 \texttt{Coding}.
-
-Anonymization is deliberately out of scope. It is the researcher's
-responsibility, and the tool expects the material it receives to already be in
-the form the research ethics process requires.
 
 The benefits of the approach are threefold. There is \textbf{no cost}, which
 removes the barrier that motivated the work. There is \textbf{data
