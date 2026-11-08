@@ -12,6 +12,10 @@
      
 \sloppy
 
+% Marcador do que ainda falta escrever. Aparece em negrito no PDF para nao
+% passar despercebido; apagar o \todo junto com o texto que o substituir.
+\newcommand{\todo}[1]{\textbf{[TO WRITE: #1]}}
+
 \title{LivreAn\'alise: A Free and Open Source Desktop Tool for\\ Qualitative Data Analysis}
 
 \author{Lucas Tito\inst{1}, Tiago Tito\inst{2},
@@ -20,7 +24,7 @@
 
 % TODO confirmar: sua unidade/campus na UPE, e se o Kenedy assina pelo
 % Campus Quixada (e como ele assina nos dois artigos da trilha).
-\address{Universidade de Pernambuco (UPE) -- TODO cidade, PE -- Brazil
+\address{Universidade de Pernambuco (UPE) -- \todo{city}, PE -- Brazil
 \nextinstitute
   Campus Quixad\'a -- Universidade Federal do Cear\'a (UFC)\\
   Quixad\'a, CE -- Brazil
@@ -33,12 +37,10 @@
 \maketitle
 
 \begin{abstract}
-  % TODO ESCREVER. Este texto e provisorio, so para o documento compilar.
-  % Maximo 10 linhas.
-  % Formula: problema (ferramentas de analise tematica sao pagas) + o que fizemos
-  % (ferramenta open source, local, com transcricao de video e export para IA) +
-  % resultado (uso em dois TCCs reais, avaliacao com TAM).
-  Abstract provis\'orio.
+  % Maximo 10 linhas. Formula: problema (as ferramentas da area sao pagas) +
+  % o que fizemos (ferramenta open source e local, com transcricao de video e
+  % export para IA) + resultado (o da oficina).
+  \todo{abstract, once the workshop results are in}
 \end{abstract}
      
 % O bloco \begin{resumo} do template foi removido de proposito: o proprio
@@ -57,8 +59,8 @@ interviews.
 Software support for this activity exists, but it is almost entirely
 commercial. The established tools in the field, such as ATLAS.ti, NVivo and
 MAXQDA, are proprietary and sold under paid licenses.
-% TODO preco e modelo de licenca de cada uma, incluindo licenca de estudante.
-% Uma frase com numeros aqui vale mais que o paragrafo inteiro.
+\todo{one sentence with the price and licensing model of each, student licenses
+included}
 Cost therefore becomes a factor in a methodological decision. Whether a
 researcher can code systematically ends up depending on license availability
 rather than on the design of the study.
@@ -124,9 +126,7 @@ who should not have to build anything. Every push to the main branch triggers a
 build on Linux, Windows and macOS runners in parallel, each producing the
 installers for its own platform, and the resulting AppImage, \texttt{.deb},
 \texttt{.exe} and \texttt{.dmg} files are published automatically as a release
-named after the version in the manifest. Separate runners are used rather than
-cross-compilation because the SQLite binding is native and has to be compiled
-for the architecture it will run on. Linux and Windows are the platforms in
+named after the version in the manifest. Linux and Windows are the platforms in
 regular use; the macOS installers are produced by the same pipeline but have
 not been tested on the platform itself.
 \begin{figure}[ht]
@@ -158,18 +158,14 @@ not been tested on the platform itself.
 \label{fig:arquitetura}
 \end{figure}
 
-Each merge into the main branch runs the test suite and the type checker and
-publishes signed-off installers for Linux, Windows and macOS, so a release is
-always reproducible from the repository.
+The test suite and the type checker run on every pull request, and the main
+branch only accepts a merge once they pass and the version in the manifest has
+been incremented, so that each release corresponds to one state of the
+repository.
 
-The tool has been evaluated in two ways. It is in use in two ongoing
-undergraduate theses, by the second and third authors, who adopted it from the
-first public release onwards and whose reports informed successive iterations.
-% TODO 1 ou 2 frases com o tema de cada TCC e o volume de material analisado.
-A hands-on workshop with a research group outside the development team is also
-planned, with an evaluation questionnaire at the end.
-% TODO quando a previa da oficina acontecer, substituir esta frase pelo
-% resultado: quantos participantes, o que responderam.
+\todo{the evaluation: a hands-on workshop with a research group outside the
+development team, how many took part, what they analysed with the tool and what
+the closing questionnaire showed}
 
 \section{Solution}
 
