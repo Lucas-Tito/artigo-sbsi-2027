@@ -120,7 +120,17 @@ Transcription uses whisper.cpp with quantized Whisper models
 \cite{radford:23} in ggml format, and a bundled ffmpeg build extracts the audio
 track. Figure~\ref{fig:arquitetura} summarizes the architecture.
 
-% TODO esta figura e TikZ e ainda nao foi compilada. Conferir no primeiro build.
+Electron was chosen so that one codebase serves the three desktop platforms,
+which matters for a tool whose users are researchers rather than developers and
+who should not have to build anything. Every push to the main branch triggers a
+build on Linux, Windows and macOS runners in parallel, each producing the
+installers for its own platform, and the resulting AppImage, \texttt{.deb},
+\texttt{.exe} and \texttt{.dmg} files are published automatically as a release
+named after the version in the manifest. Separate runners are used rather than
+cross-compilation because the SQLite binding is native and has to be compiled
+for the architecture it will run on. Linux and Windows are the platforms in
+regular use; the macOS installers are produced by the same pipeline but have
+not been tested on the platform itself.
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[
