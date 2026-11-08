@@ -70,13 +70,12 @@ offered few features and dated interfaces.
 % TODO nomear as gratuitas testadas e dizer o que faltou em cada uma.
 % Sem isso esta frase e opiniao; com isso vira evidencia.
 
-Beyond cost, two further constraints shaped the problem. First, most
-contemporary alternatives are cloud services, which requires uploading research
-material to third-party infrastructure. When that material is an interview with
-an identifiable participant, this is not a minor operational detail. Second,
-none of the tools we examined offered a way to use general-purpose AI
-assistants alongside the analysis without handing the entire dataset over to a
-model provider.
+Beyond cost, a further requirement shaped the design: the tool had to work with
+general-purpose AI assistants without embedding one. There is no model inside
+the application and no API key to configure. The researcher exports a context
+package and chooses what goes into it, from the code structure alone to a
+single document or the full project, and pastes it into whatever assistant they
+already use.
 
 This paper reports the development of LivreAn\'alise, a free and open source
 desktop application for qualitative coding. Running on the researcher's own
