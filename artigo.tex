@@ -103,15 +103,15 @@ is a single file on the researcher's disk, so there is no infrastructure to pay
 for and no data leaving the machine. This also means the tool works offline.
 
 \textbf{The application embeds no AI model.} Rather than integrating a
-provider, which would imply a cost and a data transfer the researcher may not
-want, the tool exports the analysis in a form that any external assistant can
+provider, which would imply a cost and a data transfer, the tool exports the analysis in a form that any external assistant can
 read. The integration is manual and deliberate: the researcher decides what
 leaves the machine, and when.
 
-\textbf{The project format is interoperable.} Adopting the open REFI-QDA
-exchange format \cite{refiqda} means a project can be moved in and out of
-ATLAS.ti, so choosing the tool is not a commitment that locks the researcher
-in.
+\textbf{The project format is interoperable.} Adopting REFI-QDA
+\cite{refiqda}, the open exchange standard for qualitative analysis software,
+means a project can be moved in and out of the other tools that implement it,
+ATLAS.ti among them, so choosing this one is not a commitment that locks the
+researcher in.
 
 The implementation is an Electron application written in TypeScript, with React
 and Tailwind in the interface. Project data is stored in SQLite, accessed
@@ -205,9 +205,10 @@ markings, which the researcher can paste into any assistant. The file opens
 with an explicit warning that the material will leave the machine and that
 participant consent and ethics approval should be checked first.
 
-Interoperability with ATLAS.ti is provided through REFI-QDA
-\cite{refiqda}: a \texttt{.qdpx} project can be opened, creating a new project,
-and any project can be exported back. Codes map to leaf \texttt{Code} elements,
+Interoperability is provided through REFI-QDA \cite{refiqda}, which is
+supported by the main tools in the field, ATLAS.ti among them: a
+\texttt{.qdpx} project can be opened, creating a new project, and any project
+can be exported back. Codes map to leaf \texttt{Code} elements,
 categories to nested \texttt{Code} elements, groups to \texttt{Set} and
 \texttt{MemberCode}, and quotations to \texttt{PlainTextSelection} and
 \texttt{Coding}.
